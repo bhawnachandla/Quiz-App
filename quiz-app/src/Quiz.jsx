@@ -15,7 +15,6 @@ const Quiz = () => {
     axios.post('https://api.essaychecker.ai/quiz/trial/', {})
       .then(response => {
         console.log('API Response:', response.data); 
-        
         if (response.data && response.data.data) {
           const questionsArray = Object.values(response.data.data);
           setQuestions(questionsArray);
